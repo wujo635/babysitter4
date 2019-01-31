@@ -9,7 +9,7 @@ public class BabysitterCalculatorTest {
 
     @Test
     public void shouldReturnZeroWithNoInputParameters() {
-        assertEquals(0, calculator.calculate(16,0));
+        assertEquals(0, calculator.calculate(17,0));
     }
 
     @Test
