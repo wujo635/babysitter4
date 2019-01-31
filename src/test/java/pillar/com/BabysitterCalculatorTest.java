@@ -17,4 +17,9 @@ public class BabysitterCalculatorTest {
     public void shouldDisallowStartTimeEarlierThan5pm() {
         assertEquals(-1, calculator.calculate(16, 0));
     }
+
+    @Test
+    public void shouldAllowStartTimeAsLateAs4am() {
+        assertEquals(0, calculator.calculate(4, 4));
+    }
 }
