@@ -9,6 +9,6 @@ public class BabysitterCalculatorTest {
 
     @Test
     public void shouldReturnZeroWithNoInputParameters() {
-        assertEquals(0, calculator.calculate());
+        assertEquals(0, calculator.calculate(0,0));
     }
 }
