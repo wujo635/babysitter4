@@ -5,8 +5,10 @@ import static org.junit.Assert.*;
 
 public class BabysitterCalculatorTest {
 
+    private BabysitterCalculator calculator = new BabysitterCalculator();
+
     @Test
-    public void sanityCheck() {
-        assertEquals(0,-1);
+    public void shouldReturnZeroWithNoInputParameters() {
+        assertEquals(0, calculator.calculate());
     }
 }
