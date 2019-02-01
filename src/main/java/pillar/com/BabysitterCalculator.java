@@ -4,13 +4,13 @@ public class BabysitterCalculator {
 
 
     public int calculate(int start, int end) {
-        if (isWithinWorkingHours(start)) {
+        if (isWithinWorkingHours(start) || isWithinWorkingHours(end)) {
             return -1;
         }
         return 0;
     }
 
-    private boolean isWithinWorkingHours(int start) {
-        return start < 17 && start > 4;
+    private boolean isWithinWorkingHours(int time) {
+        return time < 17 && time > 4;
     }
 }
