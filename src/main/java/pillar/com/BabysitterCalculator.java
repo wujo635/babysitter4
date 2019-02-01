@@ -7,7 +7,7 @@ public class BabysitterCalculator {
         if (isWithinWorkingHours(start) || isWithinWorkingHours(end)) {
             return -1;
         }
-        return 0;
+        return (end - start);
     }
 
     private boolean isWithinWorkingHours(int time) {
