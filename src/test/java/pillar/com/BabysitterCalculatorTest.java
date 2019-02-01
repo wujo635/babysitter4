@@ -42,4 +42,9 @@ public class BabysitterCalculatorTest {
     public void shouldCalculateOneHourOfWork() {
         assertEquals(1, calculator.calculate(17,18));
     }
+
+    @Test
+    public void shouldCalculateMultipleHoursOfWork() {
+        assertEquals(2, calculator.calculate(17,19));
+    }
 }
