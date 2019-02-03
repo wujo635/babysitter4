@@ -8,9 +8,9 @@ public class BabysitterCalculator {
             return -1;
         }
         if (isValidMidnightCrossing(start, end)) {
-            return sumPay(start,24,family) + sumPay(0,end,family);
+            return sumPay(start, 24, family) + sumPay(0, end, family);
         }
-        return sumPay(start,end,family);
+        return sumPay(start, end, family);
     }
 
     private int sumPay(int start, int end, Family family) {
