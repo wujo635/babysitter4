@@ -52,4 +52,9 @@ public class BabysitterCalculatorTest {
     public void shouldDisallowEndBeforeStartTime() {
         assertEquals(-1, calculator.calculate(20, 17));
     }
+
+    @Test
+    public void shouldDisallowEndBeforeStartWithMidnightCrossing() {
+        assertEquals(-1, calculator.calculate(4,17));
+    }
 }
