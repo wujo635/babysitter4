@@ -7,8 +7,8 @@ public class BabysitterCalculator {
         if (isValidWorkingHours(start, end)) {
             return -1;
         }
-        if (start >= 17 && end <= 4) {
-            return (24 - start) + end;
+        if (isValidMidnightCrossing(start, end)) {
+            return 24 - start + end;
         }
         return (end - start);
     }
@@ -18,12 +18,20 @@ public class BabysitterCalculator {
     }
 
     private boolean isEndBeforeStart(int start, int end) {
-        if (start <= 4 && end >= 17) {
+        if (isInvalidMidnightCrossing(start, end)) {
             return true;
-        } else if (start >= 17 && end <= 4) {
+        } else if (isValidMidnightCrossing(start, end)) {
             return false;
         }
         return end < start;
+    }
+
+    public boolean isInvalidMidnightCrossing(int start, int end) {
+        return start <= 4 && end >= 17;
+    }
+
+    private boolean isValidMidnightCrossing(int start, int end) {
+        return start >= 17 && end <= 4;
     }
 
     private boolean isOutsideWorkingHours(int time) {
