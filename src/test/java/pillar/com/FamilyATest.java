@@ -21,6 +21,10 @@ public class FamilyATest {
     @Test
     public void shouldReturn20PerHourAfter11pm() {
         assertEquals(20, family.getPayAtHour(23));
+        assertEquals(20, family.getPayAtHour(0));
+        assertEquals(20, family.getPayAtHour(1));
+        assertEquals(20, family.getPayAtHour(2));
+        assertEquals(20, family.getPayAtHour(3));
     }
 
 }
