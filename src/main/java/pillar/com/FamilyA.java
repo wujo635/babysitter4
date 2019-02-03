@@ -4,6 +4,9 @@ public class FamilyA extends Family {
 
     @Override
     public int getPayAtHour(int hour) {
-        return 15;
+        if (hour < 23) {
+            return 15;
+        }
+        return 20;
     }
 }

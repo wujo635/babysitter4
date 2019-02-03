@@ -20,7 +20,7 @@ public class FamilyATest {
 
     @Test
     public void shouldReturn20PerHourAfter11pm() {
-        assertEquals(20, family.getPayAtHour(0));
+        assertEquals(20, family.getPayAtHour(23));
     }
 
 }
