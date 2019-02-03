@@ -3,7 +3,7 @@ package pillar.com;
 public class BabysitterCalculator {
 
 
-    public int calculate(int start, int end) {
+    public int calculate(int start, int end, Family family) {
         if (isValidWorkingHours(start, end)) {
             return -1;
         }
@@ -26,7 +26,7 @@ public class BabysitterCalculator {
         return end < start;
     }
 
-    public boolean isInvalidMidnightCrossing(int start, int end) {
+    private boolean isInvalidMidnightCrossing(int start, int end) {
         return start <= 4 && end >= 17;
     }
 
