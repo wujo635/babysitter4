@@ -30,21 +30,26 @@ public class BabysitterCalculatorTest {
 
     @Test
     public void shouldDisallowEndTimeEarlierThan5pm() {
-        assertEquals(-1, calculator.calculate(17,16));
+        assertEquals(-1, calculator.calculate(17, 16));
     }
 
     @Test
     public void shouldDisallowEndTimeAfter4am() {
-        assertEquals(-1,calculator.calculate(3,5));
+        assertEquals(-1, calculator.calculate(3, 5));
     }
 
     @Test
     public void shouldCalculateOneHourOfWork() {
-        assertEquals(1, calculator.calculate(17,18));
+        assertEquals(1, calculator.calculate(17, 18));
     }
 
     @Test
     public void shouldCalculateMultipleHoursOfWork() {
-        assertEquals(2, calculator.calculate(17,19));
+        assertEquals(2, calculator.calculate(17, 19));
+    }
+
+    @Test
+    public void shouldDisallowEndBeforeStartTime() {
+        assertEquals(-1, calculator.calculate(20, 17));
     }
 }
