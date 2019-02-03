@@ -8,9 +8,17 @@ public class BabysitterCalculator {
             return -1;
         }
         if (isValidMidnightCrossing(start, end)) {
-            return 24 - start + end;
+            return sumPay(start,24,family) + sumPay(0,end,family);
         }
-        return (end - start);
+        return sumPay(start,end,family);
+    }
+
+    private int sumPay(int start, int end, Family family) {
+        int sum = 0;
+        for (int i = start; i < end; i++) {
+            sum += family.getPayAtHour(i);
+        }
+        return sum;
     }
 
     private boolean isValidWorkingHours(int start, int end) {
